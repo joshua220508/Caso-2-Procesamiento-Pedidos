@@ -1,4 +1,3 @@
-
 package com.universidad.procesamientopedidos.model;
 
 import javafx.application.Platform;
@@ -47,8 +46,6 @@ public class ProcesadorPedidos extends Task<Void> {
             Platform.runLater(() -> pedidosCompletados.set(completados));
 
             updateProgress(completados, TOTAL_PEDIDOS);
-            updateMessage("Procesando pedido " + completados
-                    + " de " + TOTAL_PEDIDOS);
         }
 
         return null;

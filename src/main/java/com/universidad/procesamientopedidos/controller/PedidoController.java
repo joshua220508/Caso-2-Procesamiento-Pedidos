@@ -1,4 +1,3 @@
-
 package com.universidad.procesamientopedidos.controller;
 
 import com.universidad.procesamientopedidos.model.ProcesadorPedidos;
@@ -68,11 +67,6 @@ public class PedidoController {
                             (double) completados / TOTAL_PEDIDOS
                     );
                 }
-        );
-
-        nuevaTarea.messageProperty().addListener(
-                (observable, anterior, actual) ->
-                        lblEstado.setText("Estado: " + actual)
         );
 
         executor.execute(() -> {
